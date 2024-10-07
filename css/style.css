@@ -2,18 +2,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'plus jakarta sans' 'neue haas grotesk';
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
-
 .hero{
     max-width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255, 255, 255, 0.3));
+    background-color: rgba(0, 0, 0, 0.6);
     position: relative;
     padding: 0 5%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	padding: 50px 25px;
+}
+
+.hero h1 {
+	margin-bottom: 35px;
 }
 
 nav{
@@ -23,56 +28,74 @@ nav{
     left: 0;
     padding: 20px 8%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
 
-}
 nav .logo{
-    width: 80px;
+    width: 60px;
 }
+
 nav ul li{
     list-style: none;
     display: inline-block;
     margin-left: 40px;
 }
+
 nav ul li a{
     text-decoration: none;
-    color: #000000;
-    font-size: 17px;
-
+    color: #ffffff;
+    font-size: 30px;
 }
 
-.content{
-    text-align: center;
-}
+
+
 .content h1{
-    font: size 160px;
-    color:black;
-    font-weight: 600;
-    transition: 0.5s;
+
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+     
+
+.eyebrow {
+	font-family: "Poppins", sans-serif;
+	font-size: 12px;
+	font-weight: 450;
+	text-transform: uppercase;
+	color: #EFAD15;
+	
 }
-.content h1: :hover{
-    -webkit-text-stroke: 2px #ffff;
-    color: transparent;
+.cta {
+	font-family: "Poppins", sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+	background-color: #EFAD15;
+	color: #1B1D1F;
+	padding: 12px 30px 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 6px;
+}
+ 
+.cta:hover {
+	background-color: #f0ba3e;
 }
 
-
-.content a{
-    text-decoration: none;
-    display: inline-block;
-    color: rgb(0, 3, 6);
-    font-size: 24px;
-    border: 2px solid rgb(0, 0, 0);
-    padding: 14px 70px;
-    border-radius: 50px;
-    margin-top: 20px;
-}
+/* font-family: "Plus Jakarta Sans", sans-serif; */
+/* font-family: 'Neue Haas Grotesk Display Pro', sans-serif; */
+/* font-family: "Poppins", sans-serif; */
 
 .backvid{
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: -1;
+    aspect-ratio:2/3;
+    object-fit: cover;
+    width: 100vw; /*veiw port width, her resizer jeg til altid at se billedet.*/
 }
 
 @media (min-aspect-ratio:16/9){
@@ -90,22 +113,119 @@ nav ul li a{
 }
 
 .midfoot{
-    background-color: #444549;
-    color: #EFAD15; 
-    font-size: 2rem;
-    padding: 20px 8%;
+    background-color:#EFAD15;
+    color: #1B1D1F; 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: right;
+}
+
+.c1{
+    flex: 1;
+    margin: 0 20px;
+}
+.c1{
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #1B1D1F;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.midfoot i{
+    font-size: 22px;
+    margin-right: 5px;
+    flex-shrink: 0;
+}
+.udvalg h1 p{
+    color: #444549;
+    padding: 3rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.imggal{
+    max-width: 100%;
+    padding: 10% 20%;
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    background-color: #EFAD15;
+    color: #444549;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.btn :hover{
+    background-color: black;
+}
+
+.ekstramid{
+    background: #F4F5EF;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.midfoot ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 100px;
 
+.productsgal{
+    background: #F4F5EF;
+    display: flex;
+    flex-wrap: wrap; /*flex sætter objekter omkring hinanden, flex wrap */
+    gap: 20px;
+    padding: 40% 40px; /* her styrre vi placering af vores objekter*/
 }
-.midfoot ul li a{
-    text-decoration: none;
-    color: #000000;
-    font-size: 20px;
+
+.productsgal>div>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.productfooter{
+    background-color: #444549;
+    color: #EFAD15; 
+    font-size: 2rem;
+    padding: 15px;
+    text-align: center;
+}
+
+.productfooter .footlogo {
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: start;
+}
+.productfooter .ctabtn{
+    width: 390px;
+    height: 433px;
+    flex-shrink: 0;
+}
+
+.productfooter .ctabtn:hover{
+    background-color: black;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+    background-color: #ffa500;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+}
+
+.footer-text {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
 }
