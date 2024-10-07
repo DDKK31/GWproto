@@ -78,7 +78,15 @@
             <img src="img/thumb.png" alt="Video thumbnail" style="width: 100%; height: 200px; object-fit: cover;">
         </div>
     </main>
-
+    <script>
+        // Simple accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
     <footer>
         <div class="footer-logo"><img src="img/Grey Wolf 1.png" alt=""></div>
         <p class="footer-text">Modemærke, der kombinerer bæredygtighed med tidløst design og høj kvalitet. Vi tror på, at mode kan være ansvarlig uden at gå på kompromis med stil.</p>
