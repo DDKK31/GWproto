@@ -21,6 +21,7 @@
 	margin-bottom: 35px;
 }
 
+/*headder*/
 nav{
     width: 100%;
     position: absolute;
@@ -31,24 +32,15 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-}
-
-nav .logo{
-    width: 60px;
-}
-
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-left: 40px;
-}
-
-nav ul li a{
     text-decoration: none;
+    background-color: #1B1D1F;
     color: #ffffff;
     font-size: 30px;
 }
 
+nav .logo{
+    width: 50px;
+}
 
 
 .content h1{
@@ -171,6 +163,8 @@ nav ul li a{
     justify-content: center;
 }
 
+
+/*produkt side*/
 .productsgal{
     background: #F4F5EF;
     display: flex;
@@ -178,14 +172,10 @@ nav ul li a{
     gap: 20px;
     padding: 40% 40px; /* her styrre vi placering af vores objekter*/
 }
-
 .productsgal>div>div{
     display: flex;
     justify-content: space-between;
 }
-
-
-
 .productfooter{
     background-color: #444549;
     color: #EFAD15; 
@@ -193,7 +183,6 @@ nav ul li a{
     padding: 15px;
     text-align: center;
 }
-
 .productfooter .footlogo {
     width: 80px;
     border-radius: 50%;
@@ -205,11 +194,69 @@ nav ul li a{
     height: 433px;
     flex-shrink: 0;
 }
-
 .productfooter .ctabtn:hover{
     background-color: black;
 }
+/* produkt side info og setup */
+.product-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
 
+.product-description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.color-options, .size-options {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+}
+
+.color-option.selected {
+    border-color: #ffa500;
+}
+
+.size-option {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.size-option.selected {
+    background-color: #ffa500;
+    color: white;
+    border-color: #ffa500;
+}
+
+.accordion {
+    margin-top: 1rem;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.accordion-header {
+    padding: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordion-content {
+    padding: 1rem;
+    display: none;
+}
+
+/* footer */
 footer {
     background-color: #333;
     color: white;
@@ -220,12 +267,28 @@ footer {
 .footer-logo {
     width: 40px;
     height: 40px;
-    background-color: #ffa500;
-    border-radius: 50%;
     margin: 0 auto 1rem;
 }
 
 .footer-text {
     font-size: 0.9rem;
     margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.newsletter-input {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border: none;
+}
+
+.newsletter-button {
+    padding: 0.5rem 1rem;
+    background-color: #ffa500;
+    color: white;
+    border: none;
 }
